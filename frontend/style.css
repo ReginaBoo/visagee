@@ -73,7 +73,7 @@ ul a {
   font-size: 18px;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  border-color: rgb(210, 205, 194);
+  border-color: rgb(195, 195, 195);
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -97,32 +97,32 @@ ul a {
 
 .about {
   position: relative;
-  max-width: 1340px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .about div {
   position: absolute;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 
 .about-me {
   max-width: 456px;
   top: 30px;
-  left: 20px;
+  left: 0px;
 }
 
 /* Второй блок — справа чуть ниже */
 .about-dream {
   max-width: 465px;
   top: 150px;
-  right: 2%;
+  right: 0%;
 }
 
 /* Третий блок — внизу посередине */
 .about-way {
   max-width: 409px;
-  top: 420px;
+  top: 500px;
   left: 35%;
   transform: translateX(-50%);
 }
@@ -145,9 +145,10 @@ ul a {
 }
 
 .works h1 {
+  margin-top: 20px;
   font-family: "Playfair Display", serif;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 48px;
 }
 
@@ -181,11 +182,125 @@ ul a {
   border: none;
   font-size: 80px;
   cursor: pointer;
-  padding: 20px 10px;
+  padding: 20px 8px;
   color: rgb(235, 232, 226);
   transition: 0.3s;
 }
 
 .arrow:hover {
   color: #000;
+}
+
+.services {
+  max-width: 1120px;
+  margin: 0px auto;
+  padding: 0px 0px;
+
+}
+
+.services h2 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  gap: 0px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+}
+
+.card-photo img {
+  border-radius: 20px;
+  width: 240px;
+  height: 288px;
+  object-fit: cover;
+}
+
+.card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-text h3 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.card-text-serv {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-text-serv li {
+  margin-bottom: 20px;
+}
+
+.service-line {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.service-info {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+
+}
+
+.service-info.divider::after {
+  padding: 0;
+  margin: 0;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+  pointer-events: none;
+}
+
+.service-info p {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.price {
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+.desc p {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  padding-top: 0;
+  color: #666;
+  font-size: 14px;
 }
