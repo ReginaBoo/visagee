@@ -60,7 +60,6 @@ ul a {
   margin: 0;
   padding: 0;
   font-size: 32px;
-
 }
 
 .hero-text button {
@@ -303,4 +302,110 @@ ul a {
   padding-top: 0;
   color: #666;
   font-size: 14px;
+}
+
+.services button {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 20px;
+  padding: 10px 50px;
+  font-size: 24px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-color: rgb(195, 195, 195);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.note {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+.contacts-info-map {
+  max-width: 1120px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px 20px;
+  align-items: center;
+}
+
+.map {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.map iframe {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid rgb(213, 213, 213);
+}
+
+.contacts {
+  margin-bottom: 30px;
+}
+
+.contacts h2 {
+  margin-top: 120px;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+.contacts-info {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 50px;
+  padding-left: 0px;
+}
+
+.contacts-info ul {
+  list-style: none;
+  margin: 0;
+}
+
+.contacts-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.contacts-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacts-text p {
+
+  margin: 0;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 60px;
+  background-color: rgb(85, 87, 91);
+  font-size: 12px;
+  color: #919191;
 }
