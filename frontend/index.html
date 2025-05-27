@@ -26,9 +26,10 @@
     <div class="hero-text">
       <p class="logo-text">ALSU SHARAFIEVA</p>
       <p class="logo-text2">ПРОФЕССИОНАЛЬНЫЙ ВИЗАЖИСТ</p>
-      <button>Мои услуги</button>
+      <button onclick="scrollToWorks()">Мои услуги</button>
     </div>
-    <div class="hero-img"><img src="./images/hero.jpg" width="538" height="660" alt="Alsu Sharafieva" /></div>
+    <div class=" hero-img"><img src="./images/hero.jpg" width="538" height="660" alt="Alsu Sharafieva" />
+    </div>
   </section>
 
   <section id="about" class="about-main">
@@ -222,9 +223,9 @@
       </div>
     </div>
     <div class="button-wrapper">
-      <button>Записаться</button>
+      <button onclick="openSidebar()"">Записаться</button>
     </div>
-    <p class="note">*выезд на все услуги от 1000 ₽ (в Михайловск 2500 ₽)</p>
+    <p class=" note">*выезд на все услуги от 1000 ₽ (в Михайловск 2500 ₽)</p>
   </section>
   <section id="contacts" class="contacts">
     <h2>Где меня найти?</h2>
@@ -257,10 +258,47 @@
           width="627" height="430" frameborder="0"></iframe> </div>
     </div>
   </section>
+
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="onOverlayClick(event)">
+    <div id="bookingSidebar" class="sidebar">
+      <span class="close-btn" onclick="closeSidebar()">&times;</span>
+      <div class="sidebar-content">
+        <span class="close-btn" onclick="closeSidebar()">&times;</span>
+        <div id="step1" class="step">
+          <h3>Выберите услугу</h3>
+          <select id="serviceSelect">
+            <option disabled selected>Выберите...</option>
+            <option value="bridal">Свадебный макияж</option>
+            <option value="full-look">Полный образ</option>
+            <option value="evening">Вечерний макияж</option>
+            <option value="brows">Коррекция бровей</option>
+          </select>
+          <button onclick="goToStep2()">Далее</button>
+        </div>
+
+        <!-- Шаг 2 -->
+        <div id="step2" class="step" style="display:none;">
+          <h3>Выберите дату и время</h3>
+          <input type="date" id="dateInput" />
+          <input type="time" id="timeInput" />
+          <button onclick="submitBooking()">Записаться</button>
+        </div>
+
+        <!-- Подтверждение -->
+        <div id="confirmation" class="step" style="display:none;">
+          <h3>Спасибо за запись!</h3>
+          <p>Скоро мы свяжемся с вами в Telegram или WhatsApp 📱</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <p>@created by ReginaBoo</p>
   </footer>
   <script src="js/gallery.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/scroll.js"></script>
 
 </body>
 
