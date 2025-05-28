@@ -40,3 +40,9 @@ function onOverlayClick(event) {
     closeSidebar();
   }
 }
+function toggleAddressField() {
+  const checkbox = document.getElementById("needTravel");
+  const addressField = document.getElementById("addressField");
+
+  addressField.style.display = checkbox.checked ? "block" : "none";
+}

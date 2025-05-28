@@ -439,7 +439,6 @@ footer {
   z-index: 1000;
 }
 
-/* Кнопка вне боковика, "прилеплена" к его левому краю */
 .close-btn {
   position: fixed;
   top: 20px;
@@ -475,13 +474,14 @@ footer {
 }
 
 .sidebar .step {
-  margin-top: 40px;
+  margin-top: 60px;
   max-width: 4750px;
 }
 
 .sidebar h3 {
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
 }
 
 .sidebar select,
@@ -494,15 +494,124 @@ footer {
 }
 
 .sidebar button {
-  background-color: #dcb2c8;
+  background-color: #000000;
   color: white;
   padding: 10px;
   width: 100%;
   border: none;
   cursor: pointer;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 .sidebar button:hover {
-  background-color: #c292af;
+  background-color: #c6c6c6;
+}
+
+.service-option {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  transition: background 0.3s ease;
+}
+
+.service-option label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.service-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.service-desc {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #666;
+}
+
+.service-price {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.radio-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 40px;
+}
+
+.radio-div input[type="radio"] {
+  display: block;
+  margin: 0;
+  height: 20px;
+  width: 20px;
+}
+
+.checkbox-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.checkbox-div {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.checkbox-div input {
+  display: block;
+  margin: 0;
+  height: 15px;
+  width: 15px;
+}
+
+
+.address-field {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+
+.address-field label {
+  margin-bottom: 5px;
+}
+
+.address-field input {
+  border-color: #bbbbbb;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+
 }

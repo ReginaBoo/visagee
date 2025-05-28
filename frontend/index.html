@@ -266,31 +266,88 @@
         <span class="close-btn" onclick="closeSidebar()">&times;</span>
         <div id="step1" class="step">
           <h3>Выберите услугу</h3>
-          <select id="serviceSelect">
-            <option disabled selected>Выберите...</option>
-            <option value="bridal">Свадебный макияж</option>
-            <option value="full-look">Полный образ</option>
-            <option value="evening">Вечерний макияж</option>
-            <option value="brows">Коррекция бровей</option>
-          </select>
-          <button onclick="goToStep2()">Далее</button>
-        </div>
+          <div class="service-option">
+            <label>
+              <div class="service-details">
+                <div class="service-title">Макияж</div>
+                <div class="service-desc">Макияж свадебный</div>
+                <div class="service-price">3500 ₽</div>
+              </div>
+              <div class="radio-div">
+                <input type="radio" name="service" value="bridal" />
+              </div>
+            </label>
+          </div>
 
-        <!-- Шаг 2 -->
-        <div id="step2" class="step" style="display:none;">
-          <h3>Выберите дату и время</h3>
-          <input type="date" id="dateInput" />
-          <input type="time" id="timeInput" />
-          <button onclick="submitBooking()">Записаться</button>
-        </div>
+          <div class="service-option">
+            <label>
+              <div class="service-details">
+                <div class="service-title">Полный образ</div>
+                <div class="service-desc">Макияж / локоны / прическа</div>
+                <div class="service-price">5000 ₽</div>
+              </div>
+              <div class="radio-div">
+                <input type="radio" name="service" value="full-look" />
+              </div>
+            </label>
+          </div>
 
-        <!-- Подтверждение -->
-        <div id="confirmation" class="step" style="display:none;">
-          <h3>Спасибо за запись!</h3>
-          <p>Скоро мы свяжемся с вами в Telegram или WhatsApp 📱</p>
+          <div class="service-option">
+            <label>
+              <div class="service-details">
+                <div class="service-title">Вечерний макияж</div>
+                <div class="service-desc">Стрелки / красные губы / нюд</div>
+                <div class="service-price">2500 ₽</div>
+              </div>
+              <div class="radio-div">
+                <input type="radio" name="service" value="evening" />
+              </div>
+            </label>
+          </div>
+
+          <div class="service-option">
+            <label>
+              <div class="service-details">
+                <div class="service-title">Коррекция бровей</div>
+                <div class="service-desc">Коррекция / окрашивание</div>
+                <div class="service-price">600 ₽ – 1300 ₽</div>
+              </div>
+              <div class="radio-div">
+                <input type="radio" name="service" value="brows" />
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="checkbox-row">
+          <span class="checkbox-label">Нужен выезд на дом?</span>
+          <div class="checkbox-div">
+            <input type="checkbox" id="needTravel" onchange="toggleAddressField()">
+          </div>
         </div>
       </div>
+
+      <div id="addressField" class="address-field">
+        <input type="text" id="address" placeholder="Введите адрес">
+      </div>
+
+      <button onclick="goToStep2()">Далее</button>
     </div>
+
+    <!-- Шаг 2 -->
+    <div id="step2" class="step" style="display:none;">
+      <h3>Выберите дату и время</h3>
+      <input type="date" id="dateInput" />
+      <input type="time" id="timeInput" />
+      <button onclick="submitBooking()">Записаться</button>
+    </div>
+
+    <!-- Подтверждение -->
+    <div id="confirmation" class="step" style="display:none;">
+      <h3>Спасибо за запись!</h3>
+      <p>Скоро мы свяжемся с вами в Telegram или WhatsApp 📱</p>
+    </div>
+  </div>
+  </div>
   </div>
 
   <footer>
